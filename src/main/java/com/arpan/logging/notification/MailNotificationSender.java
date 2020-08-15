@@ -18,7 +18,14 @@ public class MailNotificationSender implements NotificationSender{
         prop.put("mail.smtp.port", "25");
         prop.put("mail.smtp.ssl.trust", "smtp.mailtrap.io");
 
-        // TODO - set creds
+        // Register at Mailtrap and use your own creds to check mail status.
+        // Save the credentials in Environment and then uncomment the below lines
+
+        /*
+        String username = System.getenv("MAILTRAP_USERNAME");
+        String password = System.getenv("MAILTRAP_PASSWORD");
+        */
+
         String username = "e668a23daba565";
         String password = "4cf4f79e3f9ab0";
 

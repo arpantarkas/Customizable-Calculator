@@ -29,6 +29,6 @@ public class Operation {
                 " leftOperand=" + leftOperand +
                 ", rightOperand=" + rightOperand +
                 ", operation='" + operationType + "\'" +
-                "}";
+                " }";
     }
 }

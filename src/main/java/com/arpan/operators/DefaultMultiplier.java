@@ -5,15 +5,15 @@ import java.util.List;
 public class DefaultMultiplier implements Multiplier {
     
     @Override
-    public Integer multiply(List<Integer> numList) throws Exception {
+    public Integer multiply(List<Integer> numList) {
         
-        if (numList.isEmpty() == false) {
+        if (!numList.isEmpty()) {
             Integer product=1;
             for (Integer num: numList) {
-                product *= num;
+                product = Math.multiplyExact(product, num); // To check integer overflow, returns ArithmeticException by default.
             }
             return product;
         }
-        throw new Exception("ss");        
+        throw new IllegalStateException("List is Empty, can't perform the operation!");        
     }
 }
